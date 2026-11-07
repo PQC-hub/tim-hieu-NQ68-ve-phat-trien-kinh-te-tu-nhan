@@ -30,6 +30,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .credit span{display:block}
 @media(min-width:760px){.credit span{display:inline}.credit span+span:before{content:"  ·  "}}
 .tbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:inline-flex;align-items:center;justify-content:center;font-size:18px;box-shadow:var(--shadow)}
+.banner .tbtn.snd{right:calc(max(10px,env(safe-area-inset-right)) + 48px)}
 .banner .tbtn{position:absolute;top:max(10px,env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right));background:rgba(255,255,255,.85);color:#222;border-color:transparent}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:20px}
 .hero{margin-top:-1px;padding:26px 0 8px}
@@ -199,6 +200,17 @@ function pingVisit(){if(!ENDPOINT)return;var k='qdnq_v';try{if(sessionStorage.ge
 function theme(){var t=ls('qdnq_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}
 function curDark(){var t=document.documentElement.getAttribute('data-theme');if(t)return t==='dark';return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches}
 function toggleTheme(){var n=curDark()?'light':'dark';document.documentElement.setAttribute('data-theme',n);ls('qdnq_theme',n);var b=document.querySelectorAll('[data-act=theme]');for(var i=0;i<b.length;i++)b[i].textContent=n==='dark'?'☀':'☾'}
+var AC=null,SND=(ls('qdnq68_snd')!=='0');
+function actx(){try{if(!AC){var C=window.AudioContext||window.webkitAudioContext;if(!C)return null;AC=new C()}if(AC.state==='suspended')AC.resume();return AC}catch(e){return null}}
+function tone(f,t0,d,type,vol,f2){var c=actx();if(!c)return;try{var o=c.createOscillator(),g=c.createGain(),t=c.currentTime+t0;o.type=type||'sine';o.frequency.setValueAtTime(f,t);if(f2)o.frequency.exponentialRampToValueAtTime(f2,t+d);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol||0.18,t+0.015);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+0.03)}catch(e){}}
+function sfx(k){if(!SND)return;
+ if(k==='tick'){tone(660,0,0.07,'triangle',0.12)}
+ else if(k==='ok'){tone(523.25,0,0.14,'sine',0.2);tone(659.25,0.11,0.14,'sine',0.2);tone(783.99,0.22,0.28,'sine',0.2)}
+ else if(k==='bad'){tone(220,0,0.16,'sawtooth',0.1,160);tone(160,0.14,0.26,'sawtooth',0.1,110)}
+ else if(k==='win'){[523.25,659.25,783.99,1046.5].forEach(function(f,i){tone(f,i*0.13,0.22,'triangle',0.2)});tone(1046.5,0.55,0.5,'sine',0.18)}
+ else if(k==='end'){tone(392,0,0.2,'triangle',0.16);tone(330,0.18,0.2,'triangle',0.16);tone(262,0.36,0.35,'triangle',0.16)}}
+function sbtn(){return '<button class="tbtn snd" data-act="snd" aria-label="Bật/tắt âm thanh">'+(SND?'\ud83d\udd0a':'\ud83d\udd07')+'</button>'}
+function toggleSnd(){SND=!SND;ls('qdnq68_snd',SND?'1':'0');var b=document.querySelectorAll('[data-act=snd]');for(var i=0;i<b.length;i++)b[i].textContent=SND?'\ud83d\udd0a':'\ud83d\udd07';if(SND)sfx('tick')}
 function tbtn(){return '<button class="tbtn" data-act="theme" aria-label="Đổi giao diện sáng/tối">'+(curDark()?'☀':'☾')+'</button>'}
 try{var b=JSON.parse(ls('qdnq68_best')||'null');if(b&&typeof b.s==='number')best=b}catch(e){}
 
@@ -256,7 +268,7 @@ function expHtml(q,k){
  return '<div class="exp '+cls+'"><h4>'+head+' · '+esc(q.b.r)+'</h4>'+esc(q.b.e).split('\n').map(function(p,i,ar){return '<p'+(i===ar.length-1&&ar.length>1?' class="why"':'')+'>'+p+'</p>'}).join('')+'</div>'+(q.b.t?'<div class="tip"><b>CẦN NHỚ</b>'+esc(q.b.t)+'</div>':'');
 }
 function viewStart(){
- var h='<div class="banner hb"><div class="hbi"><strong>TÌM HIỂU VỀ PHÁT TRIỂN KINH TẾ TƯ NHÂN</strong><em>Theo Nghị quyết 68-NQ/TW của Bộ Chính trị, ban hành ngày 04/5/2025</em></div>'+tbtn()+'</div>';
+ var h='<div class="banner hb"><div class="hbi"><strong>TÌM HIỂU VỀ PHÁT TRIỂN KINH TẾ TƯ NHÂN</strong><em>Theo Nghị quyết 68-NQ/TW của Bộ Chính trị, ban hành ngày 04/5/2025</em></div>'+sbtn()+tbtn()+'</div>';
  h+='<div class="credit"><span><b>Biên soạn: PHẠM QUANG CHINH</b></span><span>Tài liệu dành cho những ai quan tâm đến phát triển kinh tế tư nhân ở Việt Nam</span></div>';
  h+='<div class="wrap"><div class="hero"><h1>Bộ câu hỏi trắc nghiệm về Nghị quyết 68-NQ/TW</h1><p class="sub">Bộ '+BANK.length+' câu trắc nghiệm gồm 4 phần: kiến thức chung, dành cho doanh nghiệp và hộ kinh doanh, dành cho cán bộ, công chức và tình huống thực tiễn tại địa phương (tỉnh, xã); mỗi câu có 4 phương án, chọn một đáp án đúng.</p>';
  h+='<div class="stats"><div class="stat"><b>'+BANK.length+'</b><small>câu hỏi</small></div><div class="stat"><b>'+Object.keys(THEMES).length+'</b><small>phần nội dung</small></div><div class="stat"><b>4</b><small>phương án mỗi câu</small></div><div class="stat"><b>100</b><small>điểm tối đa</small></div></div>';
@@ -277,7 +289,7 @@ function viewStart(){
 function viewQuiz(){
  var q=S.qs[S.cur],k=S.cur,n=S.qs.length,a=S.ans[k];
  var answered=Object.keys(S.ans).length;
- var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><div class="t1"><span>Câu '+(k+1)+'/'+n+' · đã làm '+answered+'</span><span>⏱ <span id="tm">'+mmss(S.el)+'</span></span></div><div class="prog"><i style="width:'+pct(answered,n)+'%"></i></div></div>'+tbtn()+'<button class="btn pri" data-act="submit" style="padding:8px 14px">Nộp bài</button></div></div>';
+ var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><div class="t1"><span>Câu '+(k+1)+'/'+n+' · đã làm '+answered+'</span><span>⏱ <span id="tm">'+mmss(S.el)+'</span></span></div><div class="prog"><i style="width:'+pct(answered,n)+'%"></i></div></div>'+sbtn()+tbtn()+'<button class="btn pri" data-act="submit" style="padding:8px 14px">Nộp bài</button></div></div>';
  h+='<div class="wrap"><div class="qlay"><div class="card main"><div class="qtags"><a class="tag red lnk" href="'+esc(THEMES[q.b.s].u)+'" target="_blank" rel="noopener" title="Mở văn bản gốc để đối chiếu">'+esc(q.b.r)+' ↗</a><a class="tag lnk" href="'+esc(THEMES[q.b.s].u)+'" target="_blank" rel="noopener" title="Mở văn bản gốc để đối chiếu">'+esc(THEMES[q.b.s].t)+' ↗</a></div>';
  h+='<p class="qtext">'+esc(q.b.q)+'</p><div class="opts">'+optHtml(q,k,'live')+'</div>';
  if(S.mode==='learn'&&a!==undefined)h+=expHtml(q,k);
@@ -291,7 +303,7 @@ function viewQuiz(){
 }
 function viewResult(){
  var r=S.res,g=gradeOf(r.score);
- var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><b>Kết quả</b></div>'+tbtn()+'</div></div><div class="wrap" style="padding-top:18px">';
+ var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><b>Kết quả</b></div>'+sbtn()+tbtn()+'</div></div><div class="wrap" style="padding-top:18px">';
  h+='<div class="card rtop"><div class="ring"><svg viewBox="0 0 120 120"><circle class="tr" cx="60" cy="60" r="52"/><circle class="fg" id="rfg" cx="60" cy="60" r="52"/></svg><div class="num"><b id="rn">0</b><small>/ 100 điểm</small></div></div><div><span class="gb">'+esc(g.name)+'</span><p style="margin:6px 0 0">'+esc(g.note)+'</p><p class="best" style="text-align:inherit">Thời gian: '+mmss(S.el)+' · '+(S.mode==='learn'?'Chế độ học':'Thi thử')+'</p></div></div>';
  if(S.sent)h+='<p class="best" style="margin:10px 0 0">✔ Kết quả đã được gửi ẩn danh vào thống kê chung.</p>';
  h+='<div class="rstats"><div class="rs"><b>'+r.n+'</b><small>tổng số câu</small></div><div class="rs ok"><b>'+r.c+'</b><small>đúng</small></div><div class="rs bad"><b>'+r.wr+'</b><small>sai</small></div><div class="rs"><b>'+r.bl+'</b><small>bỏ trống</small></div></div>';
@@ -327,7 +339,7 @@ function statsComment(d){
  return o;
 }
 function viewStats(){
- var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><b>Thống kê chung</b></div>'+tbtn()+'<button class="btn sm" data-act="stats">Làm mới</button></div></div><div class="wrap" style="padding-top:18px;padding-bottom:40px">';
+ var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><b>Thống kê chung</b></div>'+sbtn()+tbtn()+'<button class="btn sm" data-act="stats">Làm mới</button></div></div><div class="wrap" style="padding-top:18px;padding-bottom:40px">';
  if(S.loading)return h+'<div class="card">Đang tải số liệu…</div></div>';
  if(S.err)return h+'<div class="note">Chưa tải được số liệu thống kê. Kiểm tra kết nối mạng rồi bấm “Làm mới”.<br><small>Chi tiết: '+esc(S.why||'')+'</small></div></div>';
  var d=S.st;
@@ -362,16 +374,17 @@ function finish(){
  if(S.qs.length===BANK.length){var g=gradeOf(S.res.score);if(!best||S.res.score>best.s){best={s:S.res.score,g:g.name};ls('qdnq68_best',JSON.stringify(best))}}
  if(S.qs.length===BANK.length&&ENDPOINT){var th={},ty={};['th','ty'].forEach(function(w){var src=S.res[w],dst=w==='th'?th:ty;Object.keys(src).forEach(function(k){dst[k]=[src[k].c,src[k].n]})});
   send({t:'result',v:2,mode:S.mode,score:S.res.score,c:S.res.c,n:S.res.n,secs:S.el,q:S.qs.map(function(q,k){var a=S.ans[k];return [q.i,a===undefined?-1:(q.opts[a].ok?1:0)]}),th:th,ty:ty});S.sent=true}
- render();window.scrollTo(0,0);
+ sfx(S.res.score>=5?'win':'end');render();window.scrollTo(0,0);
 }
 function pick(j){
  var k=S.cur;if(S.mode==='learn'&&S.ans[k]!==undefined)return;
- if(S.mode==='exam'&&S.ans[k]===j){delete S.ans[k]}else S.ans[k]=j;
+ if(S.mode==='exam'&&S.ans[k]===j){delete S.ans[k];sfx('tick')}else{S.ans[k]=j;sfx(S.mode==='learn'?(S.qs[k].opts[j].ok?'ok':'bad'):'tick')}
  render();
 }
 function goto(i){if(i<0||i>=S.qs.length)return;S.cur=i;render();window.scrollTo(0,0)}
 app.addEventListener('click',function(e){
  var el=e.target.closest('[data-act]');if(!el)return;var a=el.getAttribute('data-act');
+ if(a==='snd')return toggleSnd();
  if(a==='theme')return toggleTheme();
  if(a==='mode'){mode=el.getAttribute('data-m');askRestart=false;return render()}
  if(a==='rs_no'){askRestart=false;return render()}
