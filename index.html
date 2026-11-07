@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Tìm hiểu về phát triển kinh tế tư nhân theo Nghị quyết 68-NQ/TW</title>
+<meta name="description" content="Bộ câu hỏi trắc nghiệm tìm hiểu về phát triển kinh tế tư nhân theo Nghị quyết 68-NQ/TW của Bộ Chính trị. Biên soạn: Phạm Quang Chinh.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#0F2F63">
+<meta name="color-scheme" content="light dark">
+<style>
+:root{--bg:#F3F5F9;--card:#FFFFFF;--card2:#F4F6FA;--line:#DCE2EB;--ink:#15202E;--muted:#5B6B7E;
+--red:#1E4FA8;--red-h:#173F87;--red-bg:#E8F0FC;--gold:#F2B205;--gold-h:#D99F00;--gold-ink:#3A2A00;--gold-bg:#FFF3C9;--gold-tx:#6B4B00;
+--ok:#157A47;--ok-bg:#E2F5EA;--bad:#C0281F;--bad-bg:#FDE9E7;--blue:#2F6FDE;--band:#0F2F63;--cream:#CFE0FA;--shadow:0 6px 24px rgba(21,32,46,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1420;--card:#162131;--card2:#1C2A3D;--line:#2B3B52;--ink:#EAF0F8;--muted:#9DB0C6;
+--red:#4F88E6;--red-h:#3C74D2;--red-bg:#16294A;--gold:#F5C547;--gold-h:#E2B23A;--gold-ink:#2B1F00;--gold-bg:#3A3010;--gold-tx:#F5D77A;
+--ok:#5FD39A;--ok-bg:#123626;--bad:#FF8A80;--bad-bg:#40191A;--blue:#8DB8FF;--band:#0A1E3F;--cream:#CFE0FA;--shadow:0 6px 24px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0D1420;--card:#162131;--card2:#1C2A3D;--line:#2B3B52;--ink:#EAF0F8;--muted:#9DB0C6;
+--red:#4F88E6;--red-h:#3C74D2;--red-bg:#16294A;--gold:#F5C547;--gold-h:#E2B23A;--gold-ink:#2B1F00;--gold-bg:#3A3010;--gold-tx:#F5D77A;
+--ok:#5FD39A;--ok-bg:#123626;--bad:#FF8A80;--bad-bg:#40191A;--blue:#8DB8FF;--band:#0A1E3F;--cream:#CFE0FA;--shadow:0 6px 24px rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.5;font-size:16px}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.banner{position:relative;background:var(--band)}
+.banner img{display:block;width:100%;height:max(23.6vw,min(42vh,33.7vw));object-fit:cover;object-position:top}
+.credit{background:var(--band);color:var(--cream);text-align:center;padding:10px max(16px,env(safe-area-inset-left));font-size:13px;line-height:1.45;letter-spacing:.02em;border-top:3px solid var(--gold)}
+.credit b{color:#fff;font-weight:700}
+.credit span{display:block}
+@media(min-width:760px){.credit span{display:inline}.credit span+span:before{content:"  ·  "}}
+.tbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:inline-flex;align-items:center;justify-content:center;font-size:18px;box-shadow:var(--shadow)}
+.banner .tbtn{position:absolute;top:max(10px,env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right));background:rgba(255,255,255,.85);color:#222;border-color:transparent}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:20px}
+.hero{margin-top:-1px;padding:26px 0 8px}
+h1{font-size:clamp(22px,4.6vw,34px);line-height:1.2;margin:0 0 6px;color:var(--red);letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 18px}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:18px}
+@media(min-width:700px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;border-left:4px solid var(--gold)}
+.stat b{display:block;font-size:26px;line-height:1.1;color:var(--red)}
+.stat small{color:var(--muted)}
+.modes{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-bottom:16px}
+@media(min-width:700px){.modes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mode{text-align:left;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 16px;display:block;width:100%}
+.mode.on{border-color:var(--red);background:var(--red-bg)}
+.mode h3{margin:0 0 4px;font-size:17px}
+.mode p{margin:0;color:var(--muted);font-size:14px}
+.go{display:block;width:100%;background:var(--gold);color:var(--gold-ink);border:0;border-radius:14px;padding:15px 20px;font-size:18px;font-weight:800;box-shadow:0 6px 0 var(--gold-h);transition:transform .08s,box-shadow .08s}
+.go:hover{background:var(--gold-h)}
+.go:active{transform:translateY(4px);box-shadow:0 2px 0 var(--gold-h)}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:10px 16px;font-weight:600}
+.btn:hover{border-color:var(--red);color:var(--red)}
+.btn.pri{background:var(--red);border-color:var(--red);color:#fff}
+.btn.pri:hover{background:var(--red-h);color:#fff}
+.btn[disabled]{opacity:.45;cursor:default}
+.best{margin:12px 0 0;text-align:center;color:var(--muted);font-size:14px}
+details{margin-top:16px}
+summary{cursor:pointer;font-weight:700;padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.refs{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.refs li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+.refs b{color:var(--red)}
+.ladder{margin:22px 0 40px}
+.ladder h2,.sec-t{font-size:18px;margin:0 0 10px}
+.lad{display:grid;gap:8px}
+.lad div{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+.lad b{min-width:84px;color:var(--red)}
+.lad em{font-style:normal;color:var(--muted)}
+/* quiz */
+.bar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;padding-top:max(10px,env(safe-area-inset-top))}
+.bar .wrap{display:flex;align-items:center;gap:10px}
+.bar .mid{flex:1;min-width:0}
+.bar .t1{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.prog{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:4px}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:99px;transition:width .3s}
+.qlay{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:18px 0 24px}
+@media(min-width:900px){.qlay{grid-template-columns:minmax(0,1fr) 280px;align-items:start}.side{position:sticky;top:76px}}
+.qtags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--card2);border:1px solid var(--line);color:var(--muted)}
+.tag.red{background:var(--red-bg);color:var(--red);border-color:transparent}
+.qtext{font-size:clamp(17px,2.4vw,20px);font-weight:700;line-height:1.4;margin:0 0 14px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px 14px;transition:border-color .12s,background .12s}
+.opt:hover:not([disabled]){border-color:var(--red)}
+.opt .k{flex:none;width:30px;height:30px;border-radius:50%;background:var(--card2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+.opt .tx{flex:1;min-width:0;overflow-wrap:anywhere}
+.opt.sel{border-color:var(--red);background:var(--red-bg)}
+.opt.sel .k{background:var(--red);color:#fff;border-color:var(--red)}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)}
+.opt.ok .k{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.bad{border-color:var(--bad);background:var(--bad-bg)}
+.opt.bad .k{background:var(--bad);color:#fff;border-color:var(--bad)}
+.opt[disabled]{cursor:default}
+.exp{margin-top:14px;border-radius:14px;padding:14px 16px;border:1px solid var(--line);background:var(--card2);font-size:15px}
+.exp.ok{background:var(--ok-bg);border-color:var(--ok)}
+.exp.bad{background:var(--bad-bg);border-color:var(--bad)}
+.exp h4{margin:0 0 6px;font-size:15px}
+.exp.ok h4{color:var(--ok)}.exp.bad h4{color:var(--bad)}
+.tip{margin-top:10px;background:var(--gold-bg);color:var(--gold-tx);border-left:5px solid var(--gold);border-radius:10px;padding:10px 14px;font-size:15px}
+.tip b{letter-spacing:.06em;font-size:12px;display:block;margin-bottom:2px}
+.nav{position:sticky;bottom:0;z-index:15;background:var(--bg);border-top:1px solid var(--line);padding:10px 0;padding-bottom:max(10px,env(safe-area-inset-bottom))}
+.nav .wrap{display:flex;gap:10px}
+.nav .btn{flex:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px}
+.gn{height:38px;border-radius:10px;border:1px solid var(--line);background:var(--card);font-weight:700;font-size:14px;padding:0;position:relative}
+.gn.cur{outline:3px solid var(--gold)}
+.gn.done{background:var(--red);border-color:var(--red);color:#fff}
+.gn.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.gn.bad{background:var(--bad);border-color:var(--bad);color:#fff}
+.gn.fl:after{content:"⚑";position:absolute;top:-6px;right:-3px;font-size:13px;color:var(--gold)}
+.legend{font-size:12px;color:var(--muted);margin-top:10px}
+.flagb{font-size:13px;padding:6px 12px;border-radius:99px}
+.flagb.on{background:var(--gold-bg);border-color:var(--gold);color:var(--gold-tx)}
+/* modal */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:50;display:flex;align-items:center;justify-content:center;padding:16px}
+.ov .card{max-width:420px;width:100%}
+.ov h3{margin:0 0 8px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.row .btn{flex:1}
+/* result */
+.rtop{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-items:center;text-align:center}
+@media(min-width:760px){.rtop{grid-template-columns:200px minmax(0,1fr);text-align:left}}
+.ring{position:relative;width:180px;height:180px;margin:0 auto}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .tr{fill:none;stroke:var(--line);stroke-width:12}
+.ring .fg{fill:none;stroke:var(--red);stroke-width:12;stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:326.7;transition:stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1)}
+.ring .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring .num b{font-size:40px;line-height:1;color:var(--red)}
+.ring .num small{color:var(--muted)}
+.gb{display:inline-block;background:var(--gold);color:var(--gold-ink);font-weight:800;border-radius:99px;padding:4px 16px;font-size:18px;margin-bottom:6px}
+.rstats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+@media(min-width:700px){.rstats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.rs{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+.rs b{display:block;font-size:24px}
+.rs.ok b{color:var(--ok)}.rs.bad b{color:var(--bad)}
+.rs small{color:var(--muted)}
+.comments{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin:0 0 16px}
+.comments p{margin:0;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:10px 14px;font-size:15px}
+.meters{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.meter-top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:14px;margin-bottom:4px}
+.meter-top span{color:var(--muted)}
+.mbar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.mbar i{display:block;height:100%;border-radius:99px;width:0;transition:width .9s ease}
+.l-hi i{background:var(--ok)}.l-mid i{background:var(--gold)}.l-lo i{background:var(--bad)}
+.recall{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin:0;padding:0;list-style:none}
+.recall li{background:var(--gold-bg);color:var(--gold-tx);border-left:5px solid var(--gold);border-radius:10px;padding:10px 14px;font-size:14px}
+.sec{margin-top:22px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip{border-radius:99px;padding:6px 14px;font-size:14px;border:1px solid var(--line);background:var(--card)}
+.chip.on{background:var(--red);border-color:var(--red);color:#fff}
+.rv{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rv .card{padding:16px}
+.rv .opt{cursor:default;padding:8px 12px}
+.rv .opt:hover{border-color:var(--line)}
+.rv .opt.ok:hover{border-color:var(--ok)}.rv .opt.bad:hover{border-color:var(--bad)}
+.acts{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin:18px 0 40px}
+@media(min-width:700px){.acts{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.btn.sm{padding:8px 14px;font-size:14px}
+.privacy{margin:10px 0 0;text-align:center;color:var(--muted);font-size:13px}
+.bigstat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+@media(min-width:700px){.bigstat{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.hq{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.hq li{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px}
+.hq b{color:var(--red)}
+.hb{background:linear-gradient(160deg,#0F2F63,#1B4A9C);padding:56px 16px 34px;text-align:center;color:#fff}.hbi strong{display:block;font-size:clamp(26px,5.6vw,46px);font-weight:800;line-height:1.15;margin:0 auto 10px;max-width:820px;letter-spacing:-.01em}.hbi em{display:block;font-style:normal;color:#CFE0FA;font-size:clamp(15px,2.4vw,18px)}
+.exp a,.refs a{color:var(--blue);font-weight:600}
+.tag.lnk{text-decoration:none;cursor:pointer;border-color:var(--blue);color:var(--blue)}.tag.red.lnk{background:var(--red-bg);color:var(--red);border-color:transparent}.tag.lnk:hover{text-decoration:underline}
+.note{padding:14px 16px;background:var(--gold-bg);color:var(--gold-tx);border-radius:12px;margin:20px 0;font-size:15px}
+#boot{padding:24px;margin:24px auto;max-width:560px;background:var(--gold-bg);color:var(--gold-tx);border-radius:12px;font-size:15px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+<div id="boot" class="wrap">Đang tải bài trắc nghiệm… Nếu dòng này vẫn hiện sau vài giây, ứng dụng xem trước (Zalo, Messenger, trình xem file…) đang chặn script. Hãy mở file bằng <b>Chrome</b> hoặc <b>Safari</b>: chạm “Mở bằng trình duyệt”, hoặc chép file vào máy rồi mở từ trình duyệt.</div>
+<noscript><div class="wrap note">Trình duyệt đang tắt JavaScript nên không chạy được bài. Hãy bật JavaScript hoặc mở bằng Chrome/Safari.</div></noscript>
+
+<script>
+(function(){
+"use strict";
+var DATA={"THEMES":{"A":{"t":"Phần I – Kiến thức chung","d":"câu 1–20","u":"https://tulieuvankien.dangcongsan.vn/he-thong-van-ban/van-ban-cua-dang/nghi-quyet-so-68-nqtw-ngay-452025-cua-bo-chinh-tri-ve-phat-trien-kinh-te-tu-nhan-11562"},"B":{"t":"Phần II – Dành cho doanh nghiệp, hộ kinh doanh","d":"câu 21–30","u":"https://tulieuvankien.dangcongsan.vn/he-thong-van-ban/van-ban-cua-dang/nghi-quyet-so-68-nqtw-ngay-452025-cua-bo-chinh-tri-ve-phat-trien-kinh-te-tu-nhan-11562"},"C":{"t":"Phần III – Dành cho cán bộ, công chức","d":"câu 31–40","u":"https://tulieuvankien.dangcongsan.vn/he-thong-van-ban/van-ban-cua-dang/nghi-quyet-so-68-nqtw-ngay-452025-cua-bo-chinh-tri-ve-phat-trien-kinh-te-tu-nhan-11562"}},"TYPES":{},"GRADES":[{"min":9,"name":"Nắm vững","cls":"g-top","note":"Bạn nắm vững nội dung Nghị quyết."},{"min":8,"name":"Hiểu tốt","cls":"g-good","note":"Bạn hiểu tốt nội dung chính; chỉ còn nhầm một vài câu."},{"min":7,"name":"Khá","cls":"g-fair","note":"Bạn nắm được phần lớn nội dung; nên đọc lại các mục của Nghị quyết ở những câu làm sai."},{"min":5,"name":"Đạt","cls":"g-pass","note":"Đạt mức tối thiểu; nên học lại bằng chế độ học rồi làm lại."},{"min":0,"name":"Cần ôn lại","cls":"g-fail","note":"Nên đọc lại Nghị quyết, học lại từng câu ở chế độ học rồi làm lại bài."}],"REF":[["NGHỊ QUYẾT SỐ 68-NQ/TW NGÀY 04/5/2025 CỦA BỘ CHÍNH TRỊ","Về phát triển kinh tế tư nhân","https://tulieuvankien.dangcongsan.vn/he-thong-van-ban/van-ban-cua-dang/nghi-quyet-so-68-nqtw-ngay-452025-cua-bo-chinh-tri-ve-phat-trien-kinh-te-tu-nhan-11562"]],"BANK":[{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Phần đầu văn bản (số hiệu, ngày ban hành)","q":"Nghị quyết số 68-NQ/TW về phát triển kinh tế tư nhân do cơ quan nào ban hành và vào ngày nào?","o":["Bộ Chính trị, ngày 04/5/2025","Ban Chấp hành Trung ương, ngày 04/5/2025","Quốc hội, ngày 17/5/2025","Chính phủ, ngày 19/5/2025"],"e":"Đáp án đúng: Bộ Chính trị, ngày 04/5/2025","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục I, quan điểm 1","q":"Nghị quyết 68-NQ/TW xác định kinh tế tư nhân là gì?","o":["Một động lực quan trọng nhất của nền kinh tế quốc gia","Thành phần kinh tế bổ trợ cho kinh tế nhà nước","Khu vực chỉ hoạt động ở các ngành nghề nhỏ lẻ","Lực lượng duy nhất quyết định tăng trưởng"],"e":"Đáp án đúng: Một động lực quan trọng nhất của nền kinh tế quốc gia","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục I, quan điểm 1","q":"Cùng với kinh tế nhà nước và kinh tế tập thể, kinh tế tư nhân giữ vai trò gì trong xây dựng nền kinh tế độc lập, tự chủ, tự lực, tự cường?","o":["Vai trò nòng cốt","Vai trò bổ trợ","Vai trò thứ yếu","Vai trò thay thế"],"e":"Đáp án đúng: Vai trò nòng cốt","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục I, quan điểm 3","q":"Nghị quyết 68-NQ/TW xác định doanh nhân là gì?","o":["Người chiến sĩ trên mặt trận kinh tế","Người làm thuê cho Nhà nước","Đối tác phụ trợ của doanh nghiệp nhà nước","Lực lượng hỗ trợ khi nền kinh tế khó khăn"],"e":"Đáp án đúng: Người chiến sĩ trên mặt trận kinh tế","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục I, quan điểm 5","q":"Theo quan điểm chỉ đạo, trong phát triển kinh tế tư nhân, Đảng lãnh đạo, Nhà nước kiến tạo và lấy đối tượng nào là trung tâm, là chủ thể?","o":["Doanh nghiệp","Cơ quan quản lý nhà nước","Doanh nghiệp nhà nước","Các hiệp hội ngành hàng"],"e":"Đáp án đúng: Doanh nghiệp","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục I (quan điểm 1 đến 5)","q":"Mục I của Nghị quyết 68-NQ/TW (Quan điểm chỉ đạo) gồm bao nhiêu quan điểm?","o":["5 quan điểm","3 quan điểm","4 quan điểm","6 quan điểm"],"e":"Đáp án đúng: 5 quan điểm","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục II.1","q":"Mục tiêu đến năm 2030, phấn đấu có bao nhiêu doanh nghiệp hoạt động trong nền kinh tế?","o":["2 triệu doanh nghiệp (20 doanh nghiệp/nghìn dân)","1 triệu doanh nghiệp","1,5 triệu doanh nghiệp","3 triệu doanh nghiệp"],"e":"Đáp án đúng: 2 triệu doanh nghiệp (20 doanh nghiệp/nghìn dân)","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục II.2","q":"Tầm nhìn đến năm 2045, Nghị quyết đặt mục tiêu như thế nào?","o":["Ít nhất 3 triệu doanh nghiệp; kinh tế tư nhân đóng góp khoảng trên 60% GDP","Ít nhất 2 triệu doanh nghiệp; đóng góp khoảng 50% GDP","Ít nhất 3 triệu doanh nghiệp; đóng góp khoảng 55-58% GDP","Ít nhất 4 triệu doanh nghiệp; đóng góp khoảng 70% GDP"],"e":"Đáp án đúng: Ít nhất 3 triệu doanh nghiệp; kinh tế tư nhân đóng góp khoảng trên 60% GDP","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục II.1","q":"Đến năm 2030, kinh tế tư nhân phấn đấu đóng góp khoảng bao nhiêu % GDP?","o":["Khoảng 55-58% GDP","Khoảng 45-50% GDP","Khoảng 50-52% GDP","Trên 60% GDP"],"e":"Đáp án đúng: Khoảng 55-58% GDP","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục II.1","q":"Đến năm 2030, tốc độ tăng trưởng bình quân của kinh tế tư nhân phấn đấu đạt khoảng bao nhiêu?","o":["Khoảng 10-12%/năm","Khoảng 6-8%/năm","Khoảng 8-10%/năm","Khoảng 12-15%/năm"],"e":"Đáp án đúng: Khoảng 10-12%/năm","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Phần mở đầu (đánh giá thực trạng)","q":"Theo phần đánh giá thực trạng, khu vực kinh tế tư nhân hiện sử dụng khoảng bao nhiêu % tổng số lao động?","o":["Khoảng 82%","Khoảng 50%","Khoảng 65%","Khoảng 95%"],"e":"Đáp án đúng: Khoảng 82%","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục II.1","q":"Đến năm 2030, có ít nhất bao nhiêu doanh nghiệp lớn của Việt Nam tham gia chuỗi giá trị toàn cầu?","o":["Ít nhất 20 doanh nghiệp","Ít nhất 10 doanh nghiệp","Ít nhất 50 doanh nghiệp","Ít nhất 100 doanh nghiệp"],"e":"Đáp án đúng: Ít nhất 20 doanh nghiệp","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục II.1","q":"Mục tiêu 2030 về trình độ, năng lực công nghệ, đổi mới sáng tạo, chuyển đổi số của kinh tế tư nhân là gì?","o":["Thuộc nhóm 3 nước đứng đầu ASEAN và nhóm 5 nước đứng đầu khu vực châu Á","Thuộc nhóm 5 nước đứng đầu ASEAN và nhóm 10 nước đứng đầu châu Á","Thuộc nhóm 3 nước đứng đầu châu Á","Thuộc nhóm 10 nước đứng đầu thế giới"],"e":"Đáp án đúng: Thuộc nhóm 3 nước đứng đầu ASEAN và nhóm 5 nước đứng đầu khu vực châu Á","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục I (quan điểm 3) và mục III.2.1","q":"Theo Nghị quyết, người dân và doanh nghiệp được tự do kinh doanh trong những ngành nghề nào?","o":["Những ngành nghề mà pháp luật không cấm","Những ngành nghề được cơ quan nhà nước cho phép","Những ngành nghề có giấy phép","Những ngành nghề thuộc danh mục khuyến khích"],"e":"Đáp án đúng: Những ngành nghề mà pháp luật không cấm","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Quyền kinh doanh chỉ có thể bị hạn chế vì các lý do quốc phòng, an ninh quốc gia, trật tự, an toàn xã hội, đạo đức xã hội, môi trường, sức khoẻ cộng đồng và phải được quy định trong văn bản nào?","o":["Luật","Thông tư của bộ, ngành","Nghị định của Chính phủ","Quyết định của Ủy ban nhân dân"],"e":"Đáp án đúng: Luật","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Nghị quyết yêu cầu giảm thiểu, xoá bỏ cơ chế và tư duy nào sau đây?","o":["Cơ chế \"xin - cho\" và tư duy \"không quản được thì cấm\"","Nguyên tắc hậu kiểm","Cơ chế thị trường","Công khai, minh bạch trong thủ tục hành chính"],"e":"Đáp án đúng: Cơ chế \"xin - cho\" và tư duy \"không quản được thì cấm\"","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Nghị quyết yêu cầu chuyển mạnh phương thức quản lý như thế nào?","o":["Từ tiền kiểm sang hậu kiểm, gắn với tăng cường kiểm tra, giám sát","Từ hậu kiểm sang tiền kiểm","Từ công bố điều kiện kinh doanh sang cấp phép đối với mọi lĩnh vực","Từ thanh tra từ xa sang thanh tra trực tiếp"],"e":"Đáp án đúng: Từ tiền kiểm sang hậu kiểm, gắn với tăng cường kiểm tra, giám sát","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục III.4","q":"Nghị quyết 68-NQ/TW yêu cầu triển khai quyết liệt Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị về nội dung nào?","o":["Đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia","Đổi mới công tác xây dựng và thi hành pháp luật","Hội nhập quốc tế trong tình hình mới","Phát triển kinh tế nhà nước"],"e":"Đáp án đúng: Đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Phấn đấu đến năm 2028, môi trường đầu tư kinh doanh của Việt Nam thuộc nhóm nào?","o":["Nhóm 3 quốc gia hàng đầu ASEAN và nhóm 30 quốc gia hàng đầu thế giới","Nhóm 5 quốc gia hàng đầu ASEAN","Nhóm 10 quốc gia hàng đầu châu Á","Nhóm 50 quốc gia hàng đầu thế giới"],"e":"Đáp án đúng: Nhóm 3 quốc gia hàng đầu ASEAN và nhóm 30 quốc gia hàng đầu thế giới","t":""},{"s":"A","y":"NH","r":"NQ 68-NQ/TW · Mục IV.2","q":"Nghị quyết giao Đảng uỷ Chính phủ chỉ đạo xây dựng, trình Quốc hội ban hành cơ chế, chính sách đặc thù, đặc biệt ngay tại kỳ họp nào?","o":["Kỳ họp thứ 9, Quốc hội khoá XV (tháng 5/2025)","Kỳ họp thứ 8, Quốc hội khoá XV","Kỳ họp thứ 10, Quốc hội khoá XV","Kỳ họp cuối năm 2025"],"e":"Đáp án đúng: Kỳ họp thứ 9, Quốc hội khoá XV (tháng 5/2025)","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Theo Nghị quyết, chính sách đặc biệt hỗ trợ doanh nghiệp nhỏ và vừa gồm nội dung nào?","o":["Bãi bỏ lệ phí môn bài; miễn thuế thu nhập doanh nghiệp trong 3 năm đầu thành lập","Giảm 50% thuế thu nhập doanh nghiệp trong 5 năm đầu","Miễn thuế giá trị gia tăng trong 3 năm đầu","Miễn toàn bộ các loại thuế trong 10 năm đầu"],"e":"Đáp án đúng: Bãi bỏ lệ phí môn bài; miễn thuế thu nhập doanh nghiệp trong 3 năm đầu thành lập","t":"Mức cụ thể do luật, nghị quyết của Quốc hội quy định; Nghị quyết nêu chủ trương, định hướng."},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.2","q":"Về thanh tra, kiểm tra doanh nghiệp, Nghị quyết bảo đảm nguyên tắc nào?","o":["Chỉ thanh tra, kiểm tra mỗi năm 1 lần, trừ trường hợp có bằng chứng rõ ràng về vi phạm","Thanh tra, kiểm tra tối đa 2 lần mỗi năm","Thanh tra, kiểm tra theo từng quý","Không giới hạn số lần thanh tra, kiểm tra"],"e":"Đáp án đúng: Chỉ thanh tra, kiểm tra mỗi năm 1 lần, trừ trường hợp có bằng chứng rõ ràng về vi phạm","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Trong năm 2025, Nghị quyết yêu cầu cắt giảm ít nhất bao nhiêu % thời gian xử lý thủ tục hành chính, chi phí tuân thủ pháp luật và điều kiện kinh doanh?","o":["Ít nhất 30% đối với mỗi nội dung","Ít nhất 10%","Ít nhất 20%","Ít nhất 50%"],"e":"Đáp án đúng: Ít nhất 30% đối với mỗi nội dung","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.7","q":"Hình thức thuế khoán đối với hộ kinh doanh được yêu cầu xoá bỏ chậm nhất vào thời điểm nào?","o":["Trong năm 2026","Trong năm 2025","Trong năm 2027","Trong năm 2030"],"e":"Đáp án đúng: Trong năm 2026","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.4","q":"Về nghiên cứu và phát triển (R&D), Nghị quyết cho phép doanh nghiệp tính vào chi phí khi xác định thu nhập chịu thuế bằng bao nhiêu?","o":["200% chi phí thực tế của hoạt động nghiên cứu và phát triển","100% chi phí thực tế","150% chi phí thực tế","300% chi phí thực tế"],"e":"Đáp án đúng: 200% chi phí thực tế của hoạt động nghiên cứu và phát triển","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.4","q":"Doanh nghiệp được trích tối đa bao nhiêu % thu nhập tính thuế thu nhập doanh nghiệp để lập quỹ phát triển khoa học, công nghệ, đổi mới sáng tạo, chuyển đổi số và nghiên cứu phát triển?","o":["Tối đa 20%","Tối đa 5%","Tối đa 10%","Tối đa 50%"],"e":"Đáp án đúng: Tối đa 20%","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.3.1","q":"Nhà nước có chính sách giảm tối thiểu bao nhiêu % tiền thuê lại đất trong 5 năm đầu đối với doanh nghiệp công nghệ cao, doanh nghiệp nhỏ và vừa, doanh nghiệp khởi nghiệp sáng tạo trong khu, cụm công nghiệp?","o":["Tối thiểu 30%","Tối thiểu 5%","Tối thiểu 10%","Tối thiểu 70%"],"e":"Đáp án đúng: Tối thiểu 30%","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.3.3","q":"Nghị quyết đề ra chương trình đào tạo, bồi dưỡng đội ngũ doanh nhân với quy mô bao nhiêu giám đốc điều hành?","o":["10.000 giám đốc điều hành","1.000 giám đốc điều hành","5.000 giám đốc điều hành","100.000 giám đốc điều hành"],"e":"Đáp án đúng: 10.000 giám đốc điều hành","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.2","q":"Về thực thi hợp đồng, Nghị quyết yêu cầu chấm dứt tình trạng nào?","o":["Cơ quan nhà nước, doanh nghiệp nhà nước chậm thực hiện nghĩa vụ thanh toán theo hợp đồng đã ký với doanh nghiệp tư nhân","Doanh nghiệp tư nhân đề nghị thanh toán trước thời hạn","Doanh nghiệp tư nhân tham gia đấu thầu các dự án công","Doanh nghiệp tư nhân hợp tác với doanh nghiệp FDI"],"e":"Đáp án đúng: Cơ quan nhà nước, doanh nghiệp nhà nước chậm thực hiện nghĩa vụ thanh toán theo hợp đồng đã ký với doanh nghiệp tư nhân","t":""},{"s":"B","y":"NH","r":"NQ 68-NQ/TW · Mục III.8","q":"Theo Nghị quyết, tiêu chí nào sau đây KHÔNG thuộc 4 tiêu chí cốt lõi để đánh giá doanh nghiệp tư nhân theo chuẩn quốc tế?","o":["Quy mô vốn điều lệ","Mức độ tuân thủ pháp luật","Giải quyết công ăn việc làm","Đóng góp vào ngân sách nhà nước và tham gia hoạt động an sinh xã hội"],"e":"Đáp án đúng: Quy mô vốn điều lệ","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.1","q":"Về vai trò của Nhà nước đối với kinh tế tư nhân, Nghị quyết xác định như thế nào?","o":["Nhà nước kiến tạo, phục vụ, hỗ trợ; không can thiệp hành chính vào hoạt động sản xuất, kinh doanh trái với nguyên tắc thị trường","Nhà nước trực tiếp điều hành hoạt động sản xuất, kinh doanh của doanh nghiệp","Nhà nước chỉ quản lý, không có trách nhiệm hỗ trợ","Nhà nước ưu tiên doanh nghiệp nhà nước trong mọi trường hợp"],"e":"Đáp án đúng: Nhà nước kiến tạo, phục vụ, hỗ trợ; không can thiệp hành chính vào hoạt động sản xuất, kinh doanh trái với nguyên tắc thị trường","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Cơ chế miễn trừ trách nhiệm đối với cán bộ, công chức được áp dụng trong trường hợp nào?","o":["Đã thực hiện đầy đủ quy trình, quy định, không tư lợi, nhưng có thiệt hại do rủi ro khách quan","Có thiệt hại xảy ra, bất kể có tư lợi hay không","Thực hiện không đúng quy trình nhưng không bị phát hiện","Chỉ khi có chỉ đạo bằng miệng của cấp trên"],"e":"Đáp án đúng: Đã thực hiện đầy đủ quy trình, quy định, không tư lợi, nhưng có thiệt hại do rủi ro khách quan","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.3","q":"Khi xử lý sai phạm về dân sự, kinh tế, Nghị quyết yêu cầu ưu tiên áp dụng biện pháp nào trước?","o":["Các biện pháp dân sự, kinh tế, hành chính","Các biện pháp hình sự","Kê biên, phong toả toàn bộ tài sản của doanh nghiệp","Đình chỉ ngay hoạt động của doanh nghiệp"],"e":"Đáp án đúng: Các biện pháp dân sự, kinh tế, hành chính","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.3","q":"Nguyên tắc nào sau đây được nêu trong Nghị quyết khi xử lý vi phạm liên quan đến doanh nghiệp, doanh nhân?","o":["Không hồi tố các quy định pháp luật để xử lý bất lợi cho doanh nghiệp; bảo đảm nguyên tắc suy đoán vô tội","Áp dụng hồi tố khi cần thiết để xử lý nghiêm","Xử lý hình sự trước, khắc phục hậu quả kinh tế sau","Kết luận kéo dài để chờ bổ sung chứng cứ"],"e":"Đáp án đúng: Không hồi tố các quy định pháp luật để xử lý bất lợi cho doanh nghiệp; bảo đảm nguyên tắc suy đoán vô tội","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Trong giải quyết thủ tục hành chính, Nghị quyết yêu cầu xác định rõ trách nhiệm của ai?","o":["Người đứng đầu cơ quan, đơn vị","Chỉ người trực tiếp nhận hồ sơ","Chỉ cơ quan cấp trên","Chỉ doanh nghiệp nộp hồ sơ"],"e":"Đáp án đúng: Người đứng đầu cơ quan, đơn vị","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.2","q":"Đối với doanh nghiệp nào, Nghị quyết yêu cầu miễn kiểm tra thực tế?","o":["Doanh nghiệp tuân thủ tốt quy định pháp luật","Doanh nghiệp có quy mô lớn","Doanh nghiệp mới thành lập","Doanh nghiệp có vốn đầu tư nước ngoài"],"e":"Đáp án đúng: Doanh nghiệp tuân thủ tốt quy định pháp luật","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Về cung cấp dịch vụ công cho doanh nghiệp, Nghị quyết yêu cầu triển khai mạnh mẽ theo hướng nào?","o":["Không phụ thuộc vào địa giới hành chính","Chỉ thực hiện tại nơi doanh nghiệp đặt trụ sở","Chỉ thực hiện trực tiếp tại bộ phận một cửa","Chỉ thực hiện đối với doanh nghiệp lớn"],"e":"Đáp án đúng: Không phụ thuộc vào địa giới hành chính","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.2.1","q":"Nghị quyết yêu cầu khắc phục tình trạng nào trong thực thi chính sách?","o":["Thiếu nhất quán giữa trung ương và địa phương, giữa các bộ, ngành và giữa các địa phương với nhau","Quá nhiều thống nhất giữa các bộ, ngành","Địa phương không được ban hành quy định nào","Trung ương không giám sát việc thực hiện"],"e":"Đáp án đúng: Thiếu nhất quán giữa trung ương và địa phương, giữa các bộ, ngành và giữa các địa phương với nhau","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục IV.6","q":"Cơ quan nào chủ trì theo dõi, đánh giá kết quả thực hiện Nghị quyết và báo cáo Bộ Chính trị?","o":["Đảng uỷ Chính phủ (phối hợp với các cơ quan liên quan)","Đảng uỷ Quốc hội","Ủy ban Kiểm tra Trung ương","Ban Tổ chức Trung ương"],"e":"Đáp án đúng: Đảng uỷ Chính phủ (phối hợp với các cơ quan liên quan)","t":""},{"s":"C","y":"NH","r":"NQ 68-NQ/TW · Mục III.8","q":"Về tổ chức Đảng và Đoàn trong doanh nghiệp, Nghị quyết yêu cầu gì?","o":["Có chính sách cụ thể, khả thi xây dựng tổ chức Đoàn Thanh niên Cộng sản Hồ Chí Minh và phát triển Đảng trong doanh nghiệp, doanh nhân","Chấm dứt hoạt động tổ chức Đảng trong doanh nghiệp tư nhân","Chỉ phát triển Đảng trong doanh nghiệp nhà nước","Không có quy định riêng"],"e":"Đáp án đúng: Có chính sách cụ thể, khả thi xây dựng tổ chức Đoàn Thanh niên Cộng sản Hồ Chí Minh và phát triển Đảng trong doanh nghiệp, doanh nhân","t":""}]};
+var BANNER="data:image/jpeg;base64,";
+var THEMES=DATA.THEMES,TYPES=DATA.TYPES,GRADES=DATA.GRADES,REF=DATA.REF,BANK=DATA.BANK;
+var ENDPOINT="https://script.google.com/macros/s/AKfycbyf-bc_nAI1Ticf1U7fwnzk958LHr-WNV_Jhupm0rz5xvi0Mi4tC1un5tniopdKRncwVA/exec";
+var app=document.getElementById('app');
+var S=null,best=null,mode='learn',timer=null,askRestart=false;
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function pt(x){x=Math.round(x*10)/10;return String(x).replace('.',',')}
+function fmt(n){n=Math.round(n*100)/100;return (n%1===0?n.toFixed(1):String(n)).replace('.',',')}
+function mmss(s){var m=Math.floor(s/60),r=s%60;return (m<10?'0':'')+m+':'+(r<10?'0':'')+r}
+function pct(a,b){return b?Math.round(a*100/b):0}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function gradeOf(x){for(var i=0;i<GRADES.length;i++)if(x>=GRADES[i].min)return GRADES[i];return GRADES[GRADES.length-1]}
+function lvl(p){return p>=80?['l-hi','Vững']:p>=60?['l-mid','Cần củng cố']:['l-lo','Cần học lại']}
+function pid(){var v=ls('qdnq_pid');if(!v||v.length<6){v='';var c='abcdefghijkmnpqrstuvwxyz23456789';for(var i=0;i<14;i++)v+=c[Math.floor(Math.random()*c.length)];ls('qdnq_pid',v)}return v}
+function send(o){if(!ENDPOINT)return;try{o.id=pid();o.k='nq68';fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(o),keepalive:true}).catch(function(){})}catch(e){}}
+function pingVisit(){if(!ENDPOINT)return;var k='qdnq_v';try{if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1')}catch(e){}send({t:'visit'})}
+function theme(){var t=ls('qdnq_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}
+function curDark(){var t=document.documentElement.getAttribute('data-theme');if(t)return t==='dark';return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches}
+function toggleTheme(){var n=curDark()?'light':'dark';document.documentElement.setAttribute('data-theme',n);ls('qdnq_theme',n);var b=document.querySelectorAll('[data-act=theme]');for(var i=0;i<b.length;i++)b[i].textContent=n==='dark'?'☀':'☾'}
+function tbtn(){return '<button class="tbtn" data-act="theme" aria-label="Đổi giao diện sáng/tối">'+(curDark()?'☀':'☾')+'</button>'}
+try{var b=JSON.parse(ls('qdnq68_best')||'null');if(b&&typeof b.s==='number')best=b}catch(e){}
+
+var PK='qdnq68_prog';
+function pk(m){return PK+'_'+(m==='exam'?'exam':'learn')}
+function saveProg(){if(!S||S.view!=='quiz')return;ls(pk(S.mode),JSON.stringify({v:1,mode:S.mode,idx:S.qs.map(function(q){return q.i}),p:S.qs.map(function(q){return q.p}),ans:S.ans,flag:S.flag,cur:S.cur,el:S.el,ts:Date.now()}))}
+function clearProg(m){try{localStorage.removeItem(pk(m))}catch(e){}}
+(function(){try{var o=localStorage.getItem(PK);if(o){var d=JSON.parse(o);if(d&&!localStorage.getItem(pk(d.mode)))localStorage.setItem(pk(d.mode),o);localStorage.removeItem(PK)}}catch(e){}})();
+function readProg(m){var raw=ls(pk(m));if(!raw)return null;try{var d=JSON.parse(raw);if(!d||d.v!==1||!Array.isArray(d.idx)||!d.idx.length||d.idx.length!==d.p.length)return null;
+ for(var n=0;n<d.idx.length;n++){var b=BANK[d.idx[n]];if(!b||!Array.isArray(d.p[n])||d.p[n].length!==b.o.length)return null;if(d.p[n].slice().sort(function(x,y){return x-y}).join()!==b.o.map(function(_,k){return k}).join())return null}
+ var ans={};Object.keys(d.ans||{}).forEach(function(k){var v=d.ans[k];if(+k>=0&&+k<d.idx.length&&v>=0&&v<d.p[+k].length)ans[k]=v});
+ d.ans=ans;d.flag=d.flag||{};d.cur=Math.min(Math.max(+d.cur||0,0),d.idx.length-1);d.el=Math.max(0,+d.el||0);d.mode=m==='exam'?'exam':'learn';return d}catch(e){return null}}
+function render(){render_();if(S&&S.view==='quiz')saveProg()}
+function newSession(m,idxs,saved){
+ var qs=idxs.map(function(i,n){var b=BANK[i];var perm=saved?saved.p[n]:shuffle(b.o.map(function(_,k){return k}));return {i:i,p:perm,b:b,opts:perm.map(function(k){return {t:b.o[k],ok:k===0}})}});
+ S={view:'quiz',mode:m,qs:qs,ans:saved?saved.ans:{},flag:saved?saved.flag:{},cur:saved?saved.cur:0,t0:Date.now()-(saved?saved.el*1000:0),el:saved?saved.el:0,done:false,filter:'all',confirm:false};
+ clearInterval(timer);timer=setInterval(function(){if(S&&S.view==='quiz'){S.el=Math.floor((Date.now()-S.t0)/1000);var e=document.getElementById('tm');if(e)e.textContent=mmss(S.el);if(S.el%5===0)saveProg()}},1000);
+ render();window.scrollTo(0,0);
+}
+function compute(){
+ var n=S.qs.length,c=0,bl=0,th={},ty={};
+ S.qs.forEach(function(q,k){var a=S.ans[k],ok=a!==undefined&&q.opts[a].ok;if(a===undefined)bl++;if(ok)c++;
+  [[th,q.b.s],[ty,q.b.y]].forEach(function(p){var m=p[0],key=p[1];m[key]=m[key]||{n:0,c:0};m[key].n++;if(ok)m[key].c++})});
+ return {n:n,c:c,bl:bl,wr:n-c-bl,score:Math.round(c*1000/n)/100,th:th,ty:ty};
+}
+function commentary(r){
+ var out=[],weak=[],bestK=null,bp=-1;
+ Object.keys(r.th).forEach(function(k){var p=pct(r.th[k].c,r.th[k].n);if(p<70)weak.push(THEMES[k].t+' ('+THEMES[k].d+')');if(p>bp){bp=p;bestK=k}});
+ if(r.c===r.n)out.push('Bạn trả lời đúng toàn bộ các tình huống.');
+ if(bestK&&bp>=70)out.push('Nhóm làm tốt nhất: '+THEMES[bestK].t+' ('+bp+'%).');
+ if(weak.length)out.push('Nên ôn lại: '+weak.join('; ')+'.');
+ if(r.ty.RG&&pct(r.ty.RG.c,r.ty.RG.n)<60)out.push('Bạn còn nhầm ở các câu phân biệt ranh giới giữa việc được làm và không được làm: hãy đọc kỹ từng lựa chọn và dòng “Cần nhớ”.');
+ if(r.bl)out.push('Còn '+r.bl+' câu chưa trả lời.');
+ return out;
+}
+function optHtml(q,k,mode2){
+ // mode2: 'live' | 'review'
+ var L='ABCD',h='';
+ q.opts.forEach(function(o,j){
+  var cls='opt',dis='';
+  var a=S.ans[k];
+  if(mode2==='review'||(S.mode==='learn'&&a!==undefined)){
+   dis=' disabled';
+   if(o.ok)cls+=' ok';else if(a===j)cls+=' bad';
+  } else if(a===j)cls+=' sel';
+  var mark=(mode2==='review'||(S.mode==='learn'&&a!==undefined))?(o.ok?' ✓':(a===j?' ✗':'')):'';
+  h+='<button class="'+cls+'" data-act="opt" data-j="'+j+'"'+dis+'><span class="k">'+L[j]+'</span><span class="tx">'+esc(o.t)+'<b>'+mark+'</b></span></button>';
+ });
+ return h;
+}
+function expHtml(q,k){
+ var a=S.ans[k],ok=a!==undefined&&q.opts[a].ok;
+ var head=a===undefined?'Bạn chưa trả lời câu này':(ok?'Chính xác':'Chưa đúng');
+ var cls=a===undefined?'':(ok?'ok':'bad');
+ return '<div class="exp '+cls+'"><h4>'+head+' · '+esc(q.b.r)+'</h4>'+esc(q.b.e)+'</div>'+(q.b.t?'<div class="tip"><b>CẦN NHỚ</b>'+esc(q.b.t)+'</div>':'');
+}
+function viewStart(){
+ var h='<div class="banner hb"><div class="hbi"><strong>TÌM HIỂU VỀ PHÁT TRIỂN KINH TẾ TƯ NHÂN</strong><em>Theo Nghị quyết 68-NQ/TW của Bộ Chính trị, ban hành ngày 04/5/2025</em></div>'+tbtn()+'</div>';
+ h+='<div class="credit"><span><b>Biên soạn: PHẠM QUANG CHINH</b></span><span>Tài liệu dành cho những ai quan tâm đến phát triển kinh tế tư nhân ở Việt Nam</span></div>';
+ h+='<div class="wrap"><div class="hero"><h1>Bộ câu hỏi trắc nghiệm về Nghị quyết 68-NQ/TW</h1><p class="sub">Bộ 40 câu trắc nghiệm gồm 3 phần: kiến thức chung, dành cho doanh nghiệp và hộ kinh doanh, dành cho cán bộ, công chức; mỗi câu có 4 phương án, chọn một đáp án đúng.</p>';
+ h+='<div class="stats"><div class="stat"><b>40</b><small>câu hỏi</small></div><div class="stat"><b>3</b><small>phần nội dung</small></div><div class="stat"><b>4</b><small>phương án mỗi câu</small></div><div class="stat"><b>100</b><small>điểm tối đa</small></div></div>';
+ h+='<div class="modes"><button class="mode'+(mode==='learn'?' on':'')+'" data-act="mode" data-m="learn"><h3>📘 Chế độ học</h3><p>Chọn xong thấy ngay đáp án đúng. Nên bắt đầu từ đây.</p></button>';
+ h+='<button class="mode'+(mode==='exam'?' on':'')+'" data-act="mode" data-m="exam"><h3>📝 Thi thử</h3><p>Được đổi đáp án, đánh dấu câu cần xem lại; đáp án hiện sau khi nộp bài.</p></button></div>';
+ var pg=readProg(mode),oth=readProg(mode==='exam'?'learn':'exam');
+ if(pg){var dn=Object.keys(pg.ans).length;h+='<div class="card" style="margin-bottom:12px;border:2px solid var(--gold)"><b>Bạn đang làm dở '+(mode==='exam'?'bài Thi thử':'bài ở Chế độ học')+'</b><p style="margin:4px 0 12px;color:var(--muted);font-size:14px">'+'đã làm '+dn+'/'+pg.idx.length+' câu · đang ở câu '+(pg.cur+1)+' · '+mmss(pg.el)+'</p><button class="go" data-act="resume">Làm tiếp →</button></div><button class="btn" data-act="start" style="width:100%">Bắt đầu lại '+(mode==='exam'?'Thi thử':'Chế độ học')+' từ đầu (xóa tiến độ cũ)</button>'}
+ else h+='<button class="go" data-act="start">Bắt đầu làm bài →</button>';
+ if(oth)h+='<p class="privacy" style="margin-top:8px">ℹ️ Bạn còn một bài đang làm dở ở '+(mode==='exam'?'Chế độ học':'Thi thử')+' — bấm thẻ đó ở trên để làm tiếp.</p>';
+ if(askRestart)h+='<div class="ov"><div class="card"><h3>Bắt đầu lại?</h3><p>Tiến độ đang lưu của '+(mode==='exam'?'Thi thử':'Chế độ học')+' sẽ bị xóa. Tiến độ của chế độ còn lại không bị ảnh hưởng.</p><div class="row"><button class="btn" data-act="rs_no">Giữ lại</button><button class="btn pri" data-act="rs_ok">Xóa và bắt đầu lại</button></div></div></div>';
+ h+='<p class="privacy" style="margin-top:8px">💾 Tiến độ làm bài tự động lưu trên thiết bị này, bạn có thể thoát ra và làm tiếp lần sau.</p>';
+ if(ENDPOINT)h+='<div style="margin-top:12px"><button class="btn" data-act="stats" style="width:100%">📊 Thống kê chung</button></div><p class="privacy">Kết quả khi làm đủ 40 câu được gửi ẩn danh (không ghi tên) để tổng hợp thống kê chung.</p>';
+ if(best)h+='<p class="best">Điểm cao nhất của bạn: <b>'+pt(best.s*10)+'/100</b> ('+esc(best.g)+')</p>';
+ h+='<div class="ladder"><h2>Thang điểm</h2><div class="lad">'+GRADES.map(function(g,i){var rng=i===0?'từ '+g.min*10+' điểm':(i===GRADES.length-1?'dưới '+GRADES[i-1].min*10+' điểm':'từ '+g.min*10+' điểm');if(i===GRADES.length-1)rng='dưới 50 điểm';return '<div><b>'+esc(g.name)+'</b><span>'+rng+' · <em>'+esc(g.note)+'</em></span></div>'}).join('')+'</div><p class="best" style="text-align:left">Mỗi câu đúng khoảng '+fmt(100/BANK.length)+' điểm (tổng 100 điểm); câu sai hoặc bỏ trống không bị trừ.</p></div>';
+ h+='</div></div>';
+ return h;
+}
+function viewQuiz(){
+ var q=S.qs[S.cur],k=S.cur,n=S.qs.length,a=S.ans[k];
+ var answered=Object.keys(S.ans).length;
+ var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><div class="t1"><span>Câu '+(k+1)+'/'+n+' · đã làm '+answered+'</span><span>⏱ <span id="tm">'+mmss(S.el)+'</span></span></div><div class="prog"><i style="width:'+pct(answered,n)+'%"></i></div></div>'+tbtn()+'<button class="btn pri" data-act="submit" style="padding:8px 14px">Nộp bài</button></div></div>';
+ h+='<div class="wrap"><div class="qlay"><div class="card main"><div class="qtags"><a class="tag red lnk" href="'+esc(THEMES[q.b.s].u)+'" target="_blank" rel="noopener" title="Mở văn bản gốc để đối chiếu">'+esc(q.b.r)+' ↗</a><a class="tag lnk" href="'+esc(THEMES[q.b.s].u)+'" target="_blank" rel="noopener" title="Mở văn bản gốc để đối chiếu">'+esc(THEMES[q.b.s].t)+' ↗</a></div>';
+ h+='<p class="qtext">'+esc(q.b.q)+'</p><div class="opts">'+optHtml(q,k,'live')+'</div>';
+ if(S.mode==='learn'&&a!==undefined)h+=expHtml(q,k);
+ if(S.mode==='exam')h+='<div style="margin-top:12px"><button class="btn flagb'+(S.flag[k]?' on':'')+'" data-act="flag">⚑ '+(S.flag[k]?'Đã đánh dấu xem lại':'Đánh dấu xem lại')+'</button></div>';
+ h+='</div><div class="card side"><div class="sec-t">Danh sách câu</div><div class="grid">';
+ S.qs.forEach(function(qq,j){var aa=S.ans[j],c='gn';if(j===S.cur)c+=' cur';if(aa!==undefined){if(S.mode==='learn')c+=qq.opts[aa].ok?' ok':' bad';else c+=' done'}if(S.flag[j])c+=' fl';h+='<button class="'+c+'" data-act="go" data-i="'+j+'">'+(j+1)+'</button>'});
+ h+='</div><div class="legend">'+(S.mode==='learn'?'Xanh: đúng · Đỏ: sai':'Đỏ: đã chọn · ⚑ đánh dấu')+' · Phím tắt: A–D chọn, ← → chuyển câu</div></div></div></div>';
+ h+='<div class="nav"><div class="wrap"><button class="btn" data-act="prev"'+(k===0?' disabled':'')+'>← Câu trước</button><button class="btn pri" data-act="next">'+(k===n-1?'Nộp bài':'Câu sau →')+'</button></div></div>';
+ if(S.confirm){var un=n-answered;h+='<div class="ov"><div class="card"><h3>Nộp bài?</h3><p>'+(un?'Bạn còn <b>'+un+'</b> câu chưa trả lời. Câu bỏ trống không được điểm.':'Bạn đã trả lời tất cả '+n+' câu.')+'</p><div class="row"><button class="btn" data-act="cancel">Làm tiếp</button><button class="btn pri" data-act="confirm">Nộp bài</button></div></div></div>'}
+ return h;
+}
+function viewResult(){
+ var r=S.res,g=gradeOf(r.score);
+ var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><b>Kết quả</b></div>'+tbtn()+'</div></div><div class="wrap" style="padding-top:18px">';
+ h+='<div class="card rtop"><div class="ring"><svg viewBox="0 0 120 120"><circle class="tr" cx="60" cy="60" r="52"/><circle class="fg" id="rfg" cx="60" cy="60" r="52"/></svg><div class="num"><b id="rn">0</b><small>/ 100 điểm</small></div></div><div><span class="gb">'+esc(g.name)+'</span><p style="margin:6px 0 0">'+esc(g.note)+'</p><p class="best" style="text-align:inherit">Thời gian: '+mmss(S.el)+' · '+(S.mode==='learn'?'Chế độ học':'Thi thử')+'</p></div></div>';
+ if(S.sent)h+='<p class="best" style="margin:10px 0 0">✔ Kết quả đã được gửi ẩn danh vào thống kê chung.</p>';
+ h+='<div class="rstats"><div class="rs"><b>'+r.n+'</b><small>tổng số câu</small></div><div class="rs ok"><b>'+r.c+'</b><small>đúng</small></div><div class="rs bad"><b>'+r.wr+'</b><small>sai</small></div><div class="rs"><b>'+r.bl+'</b><small>bỏ trống</small></div></div>';
+ var cm=commentary(r);if(cm.length)h+='<div class="comments">'+cm.map(function(c){return '<p>'+esc(c)+'</p>'}).join('')+'</div>';
+ h+='<div class="card"><div class="sec-t">Kết quả theo nhóm nội dung</div><div class="meters">';
+ Object.keys(THEMES).forEach(function(k){var m=r.th[k];if(!m)return;var p=pct(m.c,m.n),l=lvl(p);h+='<div class="'+l[0]+'"><div class="meter-top"><b>'+esc(THEMES[k].t)+'</b><span>'+m.c+'/'+m.n+' · '+l[1]+'</span></div><div class="mbar"><i data-w="'+p+'"></i></div></div>'});
+ h+='</div><div class="meters">';
+ Object.keys(TYPES).forEach(function(k){var m=r.ty[k];if(!m)return;var p=pct(m.c,m.n),l=lvl(p);h+='<div class="'+l[0]+'"><div class="meter-top"><b>'+esc(TYPES[k])+'</b><span>'+m.c+'/'+m.n+' · '+l[1]+'</span></div><div class="mbar"><i data-w="'+p+'"></i></div></div>'});
+ h+='</div></div>';
+ var wrongIdx=[];S.qs.forEach(function(q,k){var a=S.ans[k];if(!(a!==undefined&&q.opts[a].ok))wrongIdx.push(k)});
+ if(wrongIdx.length){h+='<div class="sec"><div class="sec-t">Các câu cần xem lại</div><ul class="recall">';wrongIdx.forEach(function(k){var q=S.qs[k];h+='<li><b>'+esc(q.b.r)+':</b> '+esc(q.b.q)+'<br>'+esc(q.b.e)+'</li>'});h+='</ul></div>'}
+ h+='<div class="sec"><div class="sec-t">Xem lại từng câu</div><div class="chips">';
+ [['all','Tất cả ('+r.n+')'],['wrong','Sai ('+r.wr+')'],['blank','Bỏ trống ('+r.bl+')']].forEach(function(f){h+='<button class="chip'+(S.filter===f[0]?' on':'')+'" data-act="filter" data-f="'+f[0]+'">'+f[1]+'</button>'});
+ h+='</div><div class="rv">';
+ S.qs.forEach(function(q,k){var a=S.ans[k],ok=a!==undefined&&q.opts[a].ok;
+  if(S.filter==='wrong'&&(ok||a===undefined))return;if(S.filter==='blank'&&a!==undefined)return;
+  h+='<div class="card"><div class="qtags"><a class="tag red lnk" href="'+esc(THEMES[q.b.s].u)+'" target="_blank" rel="noopener" title="Mở văn bản gốc để đối chiếu">Câu '+(k+1)+' · '+esc(q.b.r)+' ↗</a><a class="tag lnk" href="'+esc(THEMES[q.b.s].u)+'" target="_blank" rel="noopener" title="Mở văn bản gốc để đối chiếu">'+esc(THEMES[q.b.s].t)+' ↗</a></div><p class="qtext" style="font-size:16px">'+esc(q.b.q)+'</p><div class="opts">'+optHtml(q,k,'review')+'</div>'+expHtml(q,k)+'</div>'});
+ h+='</div></div><details style="margin:18px 0 0"><summary>📚 Tài liệu nguồn để đối chiếu (Nghị quyết 68-NQ/TW)</summary><ul class="refs">'+REF.map(function(r){return '<li><b>'+esc(r[0])+'</b><br>'+esc(r[1])+'<br><a href="'+esc(r[2])+'" target="_blank" rel="noopener">Mở văn bản gốc trên dangcongsan.vn ↗</a></li>'}).join('')+'</ul></details><div class="acts">'+(wrongIdx.length?'<button class="btn pri" data-act="redo">Học lại '+wrongIdx.length+' câu chưa đúng</button>':'')+'<button class="btn" data-act="again">Làm lại từ đầu</button><button class="btn" data-act="home">Về trang đầu</button></div></div>';
+ return h;
+}
+function loadStats(){
+ S={view:'stats',st:null,err:null,loading:true};render();
+ fetch(ENDPOINT+(ENDPOINT.indexOf('?')<0?'?':'&')+'action=stats&k=nq68&_='+Date.now()).then(function(r){S.http=r.status;return r.text()}).then(function(t){var d;try{d=JSON.parse(t)}catch(x){throw new Error('NOTJSON')}if(!d||!d.ok)throw new Error('NOTOK');S.st=d;S.loading=false;render()}).catch(function(er){S.err=true;S.why=(er&&er.message==='NOTJSON')?'Google trả về trang không phải dữ liệu (HTTP '+S.http+') – thường do triển khai chưa mở cho “Bất kỳ ai” hoặc mã script lỗi.':(er&&er.message==='NOTOK')?'Script trả về lỗi.':'Không kết nối được tới Google (trình duyệt trong ứng dụng có thể chặn) – thử mở bằng Chrome/Safari.';S.loading=false;render()});
+}
+function statsComment(d){
+ var o=[],weak=[],bestK=null,bp=-1;
+ Object.keys(THEMES).forEach(function(k){var m=d.th[k];if(!m||!m.n)return;var p=pct(m.c,m.n);if(p<70)weak.push(THEMES[k].t+' ('+p+'%)');if(p>bp){bp=p;bestK=k}});
+ if(d.completions<5)o.push('Mới có '+d.completions+' lượt làm đủ bài, số liệu còn ít nên chỉ mang tính tham khảo.');
+ if(d.completions){o.push('Điểm trung bình '+fmt(d.avg*10)+'/100; '+d.pass+'% lượt làm bài đạt từ 50 điểm trở lên.');}
+ if(bestK&&bp>=70)o.push('Nhóm nội dung nắm tốt nhất: '+THEMES[bestK].t+' ('+bp+'% câu đúng).');
+ if(weak.length)o.push('Nhóm cần tăng cường tuyên truyền, ôn tập: '+weak.join('; ')+'.');
+ var rg=d.ty&&d.ty.RG;if(rg&&rg.n&&pct(rg.c,rg.n)<60)o.push('Các câu phân biệt ranh giới (được làm/không được làm) còn nhiều người nhầm ('+pct(rg.c,rg.n)+'% đúng).');
+ return o;
+}
+function viewStats(){
+ var h='<div class="bar"><div class="wrap"><button class="tbtn" data-act="home" aria-label="Về trang đầu">⌂</button><div class="mid"><b>Thống kê chung</b></div>'+tbtn()+'<button class="btn sm" data-act="stats">Làm mới</button></div></div><div class="wrap" style="padding-top:18px;padding-bottom:40px">';
+ if(S.loading)return h+'<div class="card">Đang tải số liệu…</div></div>';
+ if(S.err)return h+'<div class="note">Chưa tải được số liệu thống kê. Kiểm tra kết nối mạng rồi bấm “Làm mới”.<br><small>Chi tiết: '+esc(S.why||'')+'</small></div></div>';
+ var d=S.st;
+ h+='<div class="bigstat"><div class="stat"><b>'+d.visitors+'</b><small>người đã truy cập</small></div><div class="stat"><b>'+d.participants+'</b><small>người đã làm bài</small></div><div class="stat"><b>'+d.completions+'</b><small>lượt làm đủ 40 câu</small></div><div class="stat"><b>'+(d.completions?fmt(d.avg*10):'–')+'</b><small>điểm trung bình</small></div><div class="stat"><b>'+(d.completions?d.pass+'%':'–')+'</b><small>lượt đạt (từ 50 điểm)</small></div><div class="stat"><b>'+(d.completions?mmss(d.avgSecs):'–')+'</b><small>thời gian làm TB</small></div></div>';
+ if(!d.completions)return h+'<div class="note">Chưa có ai làm đủ bài. Khi có kết quả, phần phân tích sẽ hiện ở đây.</div></div>';
+ var cm=statsComment(d);if(cm.length)h+='<div class="comments">'+cm.map(function(c){return '<p>'+esc(c)+'</p>'}).join('')+'</div>';
+ h+='<div class="card"><div class="sec-t">Phân bố xếp loại</div><div class="meters">';
+ GRADES.forEach(function(g){var c=d.grades[g.name]||0,p=pct(c,d.completions);h+='<div class="l-mid"><div class="meter-top"><b>'+esc(g.name)+'</b><span>'+c+' lượt · '+p+'%</span></div><div class="mbar"><i data-w="'+p+'"></i></div></div>'});
+ h+='</div><div class="sec-t" style="margin-top:20px">Tỷ lệ trả lời đúng theo nhóm nội dung</div><div class="meters">';
+ Object.keys(THEMES).forEach(function(k){var m=d.th[k];if(!m||!m.n)return;var p=pct(m.c,m.n),l=lvl(p);h+='<div class="'+l[0]+'"><div class="meter-top"><b>'+esc(THEMES[k].t)+'</b><span>'+p+'% · '+l[1]+'</span></div><div class="mbar"><i data-w="'+p+'"></i></div></div>'});
+ h+='</div><div class="meters">';
+ Object.keys(TYPES).forEach(function(k){var m=d.ty[k];if(!m||!m.n)return;var p=pct(m.c,m.n),l=lvl(p);h+='<div class="'+l[0]+'"><div class="meter-top"><b>'+esc(TYPES[k])+'</b><span>'+p+'% · '+l[1]+'</span></div><div class="mbar"><i data-w="'+p+'"></i></div></div>'});
+ h+='</div></div>';
+ var qs=(d.q||[]).filter(function(x){return x.n>=1}).map(function(x){return {i:x.i,p:pct(x.c,x.n),n:x.n}}).sort(function(a,b){return a.p-b.p||b.n-a.n}).slice(0,8);
+ if(qs.length){h+='<div class="sec"><div class="sec-t">Những câu nhiều người trả lời sai nhất</div><ul class="hq">';qs.forEach(function(x){var b=BANK[x.i];if(!b)return;h+='<li><b>'+x.p+'% đúng</b> · '+esc(b.r)+' — '+esc(b.q)+'<br><span style="color:var(--muted)">'+esc(b.e)+'</span></li>'});h+='</ul></div>'}
+ h+='<p class="best">Số liệu ẩn danh, cập nhật lúc '+esc(new Date(d.updated).toLocaleString('vi-VN'))+'.</p></div>';
+ return h;
+}
+function render_(){
+ var h=S===null||S.view==='start'?viewStart():S.view==='quiz'?viewQuiz():S.view==='stats'?viewStats():viewResult();
+ app.innerHTML=h;
+ if(S&&S.view==='stats'){setTimeout(function(){var ms=document.querySelectorAll('.mbar i');for(var i=0;i<ms.length;i++)ms[i].style.width=ms[i].getAttribute('data-w')+'%'},30)}
+ if(S&&S.view==='result'){
+  var r=S.res,fg=document.getElementById('rfg'),rn=document.getElementById('rn');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  setTimeout(function(){if(fg)fg.style.strokeDashoffset=String(326.7*(1-r.score/10));var ms=document.querySelectorAll('.mbar i');for(var i=0;i<ms.length;i++)ms[i].style.width=ms[i].getAttribute('data-w')+'%'},30);
+  if(reduce){rn.textContent=pt(r.score*10)}else{var t0=performance.now();(function step(t){var p=Math.min(1,(t-t0)/1000);rn.textContent=pt(r.score*10*p);if(p<1)requestAnimationFrame(step);else rn.textContent=pt(r.score*10)})(t0)}
+ }
+}
+function finish(){
+ clearInterval(timer);S.el=Math.floor((Date.now()-S.t0)/1000);S.res=compute();S.view='result';S.confirm=false;clearProg(S.mode);
+ if(S.qs.length===BANK.length){var g=gradeOf(S.res.score);if(!best||S.res.score>best.s){best={s:S.res.score,g:g.name};ls('qdnq68_best',JSON.stringify(best))}}
+ if(S.qs.length===BANK.length&&ENDPOINT){var th={},ty={};['th','ty'].forEach(function(w){var src=S.res[w],dst=w==='th'?th:ty;Object.keys(src).forEach(function(k){dst[k]=[src[k].c,src[k].n]})});
+  send({t:'result',mode:S.mode,score:S.res.score,c:S.res.c,n:S.res.n,secs:S.el,q:S.qs.map(function(q,k){var a=S.ans[k];return [q.i,a===undefined?-1:(q.opts[a].ok?1:0)]}),th:th,ty:ty});S.sent=true}
+ render();window.scrollTo(0,0);
+}
+function pick(j){
+ var k=S.cur;if(S.mode==='learn'&&S.ans[k]!==undefined)return;
+ if(S.mode==='exam'&&S.ans[k]===j){delete S.ans[k]}else S.ans[k]=j;
+ render();
+}
+function goto(i){if(i<0||i>=S.qs.length)return;S.cur=i;render();window.scrollTo(0,0)}
+app.addEventListener('click',function(e){
+ var el=e.target.closest('[data-act]');if(!el)return;var a=el.getAttribute('data-act');
+ if(a==='theme')return toggleTheme();
+ if(a==='mode'){mode=el.getAttribute('data-m');askRestart=false;return render()}
+ if(a==='rs_no'){askRestart=false;return render()}
+ if(a==='rs_ok'){askRestart=false;clearProg(mode);return newSession(mode,BANK.map(function(_,i){return i}))}
+ if(a==='stats')return loadStats();
+ if(a==='resume'){var rd=readProg(mode);if(!rd){S=null;return render()}return newSession(rd.mode,rd.idx,rd)}
+ if(a==='start'&&readProg(mode)){askRestart=true;return render()}
+ if(a==='start')return newSession(mode,BANK.map(function(_,i){return i}));
+ if(a==='home'){if(S&&S.view==='quiz')saveProg();clearInterval(timer);S=null;render();return window.scrollTo(0,0)}
+ if(!S)return;
+ if(a==='opt')return pick(+el.getAttribute('data-j'));
+ if(a==='go')return goto(+el.getAttribute('data-i'));
+ if(a==='prev')return goto(S.cur-1);
+ if(a==='next'){if(S.cur===S.qs.length-1){S.confirm=true;return render()}return goto(S.cur+1)}
+ if(a==='flag'){S.flag[S.cur]=!S.flag[S.cur];return render()}
+ if(a==='submit'){S.confirm=true;return render()}
+ if(a==='cancel'){S.confirm=false;return render()}
+ if(a==='confirm')return finish();
+ if(a==='filter'){S.filter=el.getAttribute('data-f');return render()}
+ if(a==='again')return newSession(S.mode,BANK.map(function(_,i){return i}));
+ if(a==='redo'){var idx=[];S.qs.forEach(function(q,k){var x=S.ans[k];if(!(x!==undefined&&q.opts[x].ok))idx.push(q.i)});return newSession('learn',idx)}
+});
+document.addEventListener('keydown',function(e){
+ if(!S||S.view!=='quiz'||e.ctrlKey||e.metaKey||e.altKey)return;
+ var k=e.key.toLowerCase();
+ if(k.length===1){var j='abcd'.indexOf(k);if(j<0)j='1234'.indexOf(k);if(j>=0&&j<S.qs[S.cur].opts.length&&!S.confirm){pick(j)}return}
+ if(S.confirm)return;
+ if(k==='arrowright')goto(S.cur+1);else if(k==='arrowleft')goto(S.cur-1);else if(k==='enter'&&S.mode==='learn'&&S.ans[S.cur]!==undefined&&S.cur<S.qs.length-1)goto(S.cur+1);
+});
+function flush(){if(S&&S.view==='quiz'){S.el=Math.floor((Date.now()-S.t0)/1000);saveProg()}}
+document.addEventListener('visibilitychange',function(){if(document.hidden)flush()});window.addEventListener('pagehide',flush);
+theme();pingVisit();
+var bt=document.getElementById('boot');if(bt)bt.parentNode.removeChild(bt);
+render();
+})();
+</script>
+</body>
+</html>
