@@ -330,11 +330,11 @@ function loadStats(){
 }
 function statsComment(d){
  var o=[],weak=[],bestK=null,bp=-1;
- Object.keys(THEMES).forEach(function(k){var m=d.th[k];if(!m||!m.n)return;var p=pct(m.c,m.n);if(p<70)weak.push(THEMES[k].t+' ('+p+'%)');if(p>bp){bp=p;bestK=k}});
+ Object.keys(THEMES).forEach(function(k){var m=d.th[k];if(!m||!m.n)return;var p=pct(m.c,m.n);if(p<70)weak.push({t:THEMES[k].t+' ('+p+'% câu đúng)',p:p});if(p>bp){bp=p;bestK=k}});
  if(d.completions<5)o.push('Mới có '+d.completions+' lượt làm đủ bài, số liệu còn ít nên chỉ mang tính tham khảo.');
  if(d.completions){o.push('Điểm trung bình '+fmt(d.avg*10)+'/100; '+d.pass+'% lượt làm bài đạt từ 50 điểm trở lên.');}
  if(bestK&&bp>=70)o.push('Nhóm nội dung nắm tốt nhất: '+THEMES[bestK].t+' ('+bp+'% câu đúng).');
- if(weak.length)o.push('Nhóm cần tăng cường tuyên truyền, ôn tập: '+weak.join('; ')+'.');
+ if(weak.length){weak.sort(function(x,y){return x.p-y.p});o.push('Nhóm cần tăng cường tuyên truyền, ôn tập (thấp nhất trước): '+weak.map(function(w){return w.t}).join('; ')+'.')}
  var rg=d.ty&&d.ty.RG;if(rg&&rg.n&&pct(rg.c,rg.n)<60)o.push('Các câu phân biệt ranh giới (được làm/không được làm) còn nhiều người nhầm ('+pct(rg.c,rg.n)+'% đúng).');
  return o;
 }
